@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { login } from "../services/authService";
 import { useNavigate } from "react-router-dom";
 import "../styles/auth.css";
+import "../styles/auth/login.css";
 
 
 export default function Login() {
@@ -24,14 +25,15 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <input name="email" type="email" placeholder="Email" onChange={handleChange} required /><br />
-        <input name="password" type="password" placeholder="Password" onChange={handleChange} required /><br />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <div className="login-form">
+  <h2>Login</h2>
+  {error && <p className="error">{error}</p>}
+  <form onSubmit={handleSubmit}>
+    <input name="email" type="email" placeholder="Email" onChange={handleChange} required /><br />
+    <input name="password" type="password" placeholder="Password" onChange={handleChange} required /><br />
+    <button type="submit">Login</button>
+  </form>
+</div>
+
   );
 }
