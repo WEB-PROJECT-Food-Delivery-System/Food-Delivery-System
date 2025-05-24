@@ -17,8 +17,14 @@ export default function Login() {
     try {
       const res = await login(form);
       localStorage.setItem("token", res.data.token); // store token
-      alert("Login successful!");
-      navigate("/dashboard"); // or home
+      localStorage.setItem("role", res.data.user.role); // store role
+localStorage.setItem("userId", res.data.user.id);
+
+if (res.data.user.role === "customer") {
+  navigate("/foods");
+} else if (res.data.user.role === "restaurant") {
+  navigate("/admin/dashboard");
+}
     } catch (err) {
       setError(err.response.data.message || "Login failed");
     }
@@ -32,6 +38,8 @@ export default function Login() {
     <input name="email" type="email" placeholder="Email" onChange={handleChange} required /><br />
     <input name="password" type="password" placeholder="Password" onChange={handleChange} required /><br />
     <button type="submit">Login</button>
+    <hr />
+    <a href="/register">Don't have an account? Register now</a>
   </form>
 </div>
 

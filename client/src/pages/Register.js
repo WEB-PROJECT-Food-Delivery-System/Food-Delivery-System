@@ -35,6 +35,8 @@ export default function Register() {
       <option value="restaurant">Restaurant</option>
     </select><br />
     <button type="submit">Register</button>
+     <hr />
+    <a href="/login">Already have an account? Login</a>
   </form>
 </div>
   );
