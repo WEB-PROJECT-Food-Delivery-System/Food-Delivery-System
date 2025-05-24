@@ -1,0 +1,61 @@
+/* src/styles/auth.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff5e00;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input,
+.auth-container select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-container button {
+  padding: 12px;
+  background-color: #ff5e00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: #e44b00;
+}
+
+.auth-container p {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
